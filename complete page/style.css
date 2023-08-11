@@ -1,0 +1,377 @@
+        /* Add your CSS styles here */
+        /* Reset. */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        body  {
+            line-height: 1.6;
+            font-size: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+          }
+          .logo{
+            font-size: 24px;
+            color: #FFF;
+          }
+          .menu-icon {
+            cursor: pointer;
+            font-size: 24px;
+          }
+          .navigation {
+            display: flex;
+            gap: 30px;
+          }
+          .navigation a {
+            color: #fff;
+            text-decoration: none;
+          }
+          .navigation a:hover {
+            color: #007bff;
+          }
+          .navigation.active {
+            display: block;
+          }
+        /* Panels. */
+        .splitview {
+            position: relative;
+            width: 100%;
+            min-height: 45vw;
+            overflow: hidden;
+        }
+
+        .panel {
+            position: absolute;
+            width: 100vw;
+            min-height: 45vw;
+            overflow: hidden;
+        }
+
+        .panel .content {
+            position: absolute;
+            width: 100vw;
+            min-height: 45vw;
+            color: #FFF;
+        }
+
+        .panel .description {
+            width: 25%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+
+        .panel img {
+            box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+            width: 35%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .bottom {
+            background-color: rgb(44, 44, 44);
+            z-index: 1;
+        }
+
+        .bottom .description {
+            right: 5%;
+        }
+
+        .top {
+            background-color: rgb(77, 69, 173);
+            z-index: 2;
+            width: 50vw;
+
+            /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+        }
+
+        .top .description {
+            left: 5%;
+        }
+
+        /* Handle. */
+        .handle {
+            height: 100%;
+            position: absolute;
+            display: block;
+            background-color: rgb(253, 171, 0);
+            width: 5px;
+            top: 0;
+            left: 50%;
+            z-index: 3;
+        }
+
+        /* Skewed. */
+        .skewed .handle {
+            top: 50%;
+            transform: rotate(30deg) translateY(-50%);
+            height: 200%;
+            -webkit-transform-origin: top;
+            -moz-transform-origin: top;
+            transform-origin: top;
+        }
+
+        .skewed .top {
+            transform: skew(-30deg);
+            margin-left: -1000px;
+            width: calc(50vw + 1000px);
+        }
+
+        .skewed .top .content {
+            transform: skew(30deg);
+            margin-left: 1000px;
+        }
+
+        /* maine content write here */
+        main .checklr {
+            width: 100%;
+
+
+
+        }
+
+        main .left {
+            width: 20%;
+            text-align: center;
+            float: left;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar__image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .sidebar__topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sidebar__topic-description {
+            margin-bottom: 15px;
+        }
+
+
+
+        main .right {
+            width: 80%;
+            float: right;
+            text-align: center;
+
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            padding: 12px;
+        }
+
+        .blog-card img {
+            width: 50%;
+            height: auto;
+        }
+
+        .blog-card .content {
+            padding: 15px;
+        }
+
+
+        .blog-card .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .blog-card .description {
+            margin-bottom: 15px;
+        }
+
+        .blog-card .read-more {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-card .read-more:hover {
+            background-color: #555;
+        }
+
+        .banner {
+            margin-top: 10px;
+        }
+
+        .banner img {
+            width: 92%;
+            height: 135px;
+        }
+
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 0px 0;
+            text-align: center;
+          }
+          .about-section {
+            padding: 0px 0;
+            background-color: #ffffff;
+          }
+          .contact-section {
+            padding: 0px 0;
+            background-color: #f8f9fa;
+          }
+          .contact-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+          }
+          /* Map container */
+          .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide height by width) */
+          }
+          /* Map embed */
+          .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+          }
+          .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 20px 0;
+          }
+          .footer p {
+            margin: 0;
+          }
+          .footer i {
+            font-size: 20px;
+            margin-right: 10px;
+            padding: 20px 10px;
+          }
+
+
+
+
+
+
+
+
+
+
+          @media (max-width: 768px) {
+            header{
+                width: 100%;
+            }
+            .navigation {
+              display: none;
+            }
+            .navigation.active {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 50px;
+              left: 80%;
+              align-items: center;
+              background-color: #333;
+        
+              padding: 10px;
+            }
+          }
+
+        /* Responsive. */
+        @media (max-width: 768px) {
+            body {
+                font-size: 75%;
+            }
+
+            main .checklr {
+                width: 100%;
+            }
+
+            main .left {
+                width: 100%;
+                align-items: center;
+                margin-top: 10px;
+                padding: 10px;
+
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .sidebar__image img {
+                width: 100%;
+            }
+
+            main .right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .card {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .blog-card {
+                width: 1005;
+            }
+
+            .banner {
+                width: 90%;
+                margin-left: 18px;
+            }
+
+        }
